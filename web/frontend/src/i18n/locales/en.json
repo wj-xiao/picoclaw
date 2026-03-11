@@ -25,6 +25,8 @@
     },
     "history": "History",
     "noHistory": "No chat history yet",
+    "historyLoadFailed": "Failed to load chat history",
+    "historyOpenFailed": "Failed to open this chat history",
     "loadingMore": "Loading more...",
     "deleteSession": "Delete session",
     "messagesCount": "{{count}} messages",
@@ -387,7 +389,9 @@
       "unsaved_changes": "You have unsaved changes."
     },
     "logs": {
-      "description": "System logs and monitoring."
+      "description": "System logs and monitoring.",
+      "clear": "Clear logs",
+      "empty": "Waiting for logs..."
     }
   }
 }
