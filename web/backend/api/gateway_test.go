@@ -354,7 +354,11 @@ func TestGatewayClearLogsResetsBufferedHistory(t *testing.T) {
 	}
 
 	statusRec := httptest.NewRecorder()
-	statusReq := httptest.NewRequest(http.MethodGet, "/api/gateway/status?log_offset=0&log_run_id="+strconv.Itoa(previousRunID), nil)
+	statusReq := httptest.NewRequest(
+		http.MethodGet,
+		"/api/gateway/status?log_offset=0&log_run_id="+strconv.Itoa(previousRunID),
+		nil,
+	)
 	mux.ServeHTTP(statusRec, statusReq)
 
 	if statusRec.Code != http.StatusOK {
